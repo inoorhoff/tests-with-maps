@@ -1,1 +1,49 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+<script type="text/javascript" src="https://kaart.pdok.nl/api/js/OpenLayers.js"></script>
+<script type="text/javascript" src="https://kaart.pdok.nl/api/js/proj4js-compressed.js"></script>
+<script type="text/javascript" src="https://kaart.pdok.nl/api/js/pdok-api.js"></script>
+<script type="text/javascript" src="https://kaart.pdok.nl/api/js/geozetlib.js"></script>
+<script type="text/javascript" src="https://kaart.pdok.nl/api/js/pdok-markers.js"></script>
+<script type="text/javascript" src="https://kaart.pdok.nl/api/js/pdok-layers.js"></script>
+<script type="text/javascript">
+Pdok.addcss("https://kaart.pdok.nl/api/styles/default/style.css");
+Pdok.addcss("https://kaart.pdok.nl/api/styles/api.css");
+var config_625={
+  "mapdiv": "map_625",
+  "zoom": 9,
+  "showscaleline": true,
+  "showmouseposition": true,
+  "geocoder": "{}",
+  "loc": "92152.16, 437549.12",
+  "baselayers": [
+    {
+      "id": "BRT",
+      "visible": true
+    },
+    {
+      "id": "LUFO",
+      "visible": false
+    }
+  ],
+  "markersdef": "https://kaart.pdok.nl/api/js/pdok-markers.js",
+  "layersdef": "https://kaart.pdok.nl/api/js/pdok-layers.js"
+};
+var api_625;
+Pdok.ready( 
+function(){ 
+api_625 = new Pdok.Api(config_625);
+} );
+</script>
+<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <div id="map_625" class="olMap big"></div>
+  </body>
+</html>    
+
+
 
